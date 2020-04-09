@@ -8,8 +8,10 @@
     "start": "next start"
   },
   "dependencies": {
+    "@vx/glyph": "^0.0.195",
     "bootstrap": "^4.4.1",
     "next": "9.3.4",
+    "next-images": "^1.4.0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "reactstrap": "^8.4.1"
