@@ -1,0 +1,22 @@
+.image {
+    width: 40px;
+    border-radius: 5px;
+    height: 25px;
+}
+
+.heading {
+    display: flex;
+    align-items: center;
+    color: #414141;
+}
+
+.india {
+    padding: 0px 0.4em;
+    font-family: CustomBold;
+    font-size: 1.6em;
+}
+
+.covid {
+    font-family: CustomLite;
+    font-size: 1em;
+}

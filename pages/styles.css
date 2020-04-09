@@ -1,0 +1,9 @@
+@font-face {
+    font-family: CustomBold;
+    src: url('../public/fonts/Metronic_Pro_Condensed_Bold.ttf');
+}
+
+@font-face {
+    font-family: CustomLite;
+    src: url('../public/fonts/Metronic_Pro_Condensed_Lt.ttf');
+}

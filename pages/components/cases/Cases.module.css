@@ -1,0 +1,90 @@
+.cases {
+    margin: 1em 0em;
+}
+
+.g_infections {
+    background: linear-gradient(#E7DAFF, #ffffff);
+    padding: 1em;
+    border-radius: 10%;
+    margin: 0.6em 0em;
+}
+
+.g_active {
+    background: linear-gradient(#FFF1CB, #ffffff);
+    padding: 1em;
+    border-radius: 10%;
+    margin: 0.6em 0em;
+}
+
+.g_recoveries {
+    background: linear-gradient(#DAF1DC, #ffffff);
+    padding: 1em;
+    border-radius: 10%;
+    margin: 0.6em 0em;
+}
+
+.g_death {
+    background: linear-gradient(#FFDFDF, #ffffff);
+    padding: 1em;
+    border-radius: 10%;
+    margin: 0.6em 0em;
+}
+
+.g_infections>span {
+    display: block;
+    text-align: center;
+}
+
+.g_active>span {
+    display: block;
+    text-align: center;
+}
+
+.g_recoveries>span {
+    display: block;
+    text-align: center;
+}
+
+.g_death>span {
+    display: block;
+    text-align: center;
+}
+
+.logo>img {
+    width: 35%;
+}
+
+.g_infections>.count {
+    color: #903EF3;
+    font-size: 1.6em;
+    font-family: CustomBold;
+    padding-top: 0.2em;
+}
+
+.g_active>.count {
+    color: #F7C93F;
+    font-size: 1.6em;
+    font-family: CustomBold;
+    padding-top: 0.2em;
+}
+
+.g_recoveries>.count {
+    color: #24B94A;
+    font-size: 1.6em;
+    font-family: CustomBold;
+    padding-top: 0.2em;
+}
+
+.g_death>.count {
+    color: #F46767;
+    font-size: 1.6em;
+    font-family: CustomBold;
+    padding-top: 0.2em;
+}
+
+.title {
+    font-size: 1em;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #666666;
+}
