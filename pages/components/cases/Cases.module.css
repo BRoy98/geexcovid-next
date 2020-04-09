@@ -3,28 +3,28 @@
 }
 
 .g_infections {
-    background: linear-gradient(#E7DAFF, #ffffff);
+    background: linear-gradient(135deg, #E7DAFF, #ffffff);
     padding: 1em;
     border-radius: 10%;
     margin: 0.6em 0em;
 }
 
 .g_active {
-    background: linear-gradient(#FFF1CB, #ffffff);
+    background: linear-gradient(135deg, #FFF1CB, #ffffff);
     padding: 1em;
     border-radius: 10%;
     margin: 0.6em 0em;
 }
 
 .g_recoveries {
-    background: linear-gradient(#DAF1DC, #ffffff);
+    background: linear-gradient(135deg, #DAF1DC, #ffffff);
     padding: 1em;
     border-radius: 10%;
     margin: 0.6em 0em;
 }
 
 .g_death {
-    background: linear-gradient(#FFDFDF, #ffffff);
+    background: linear-gradient(135deg, #FFDFDF, #ffffff);
     padding: 1em;
     border-radius: 10%;
     margin: 0.6em 0em;
@@ -57,34 +57,39 @@
 .g_infections>.count {
     color: #903EF3;
     font-size: 1.6em;
-    font-family: CustomBold;
+    font-family: metronic;
+    font-weight: 800;
     padding-top: 0.2em;
 }
 
 .g_active>.count {
     color: #F7C93F;
     font-size: 1.6em;
-    font-family: CustomBold;
+    font-family: metronic;
+    font-weight: 800;
     padding-top: 0.2em;
 }
 
 .g_recoveries>.count {
     color: #24B94A;
     font-size: 1.6em;
-    font-family: CustomBold;
+    font-family: metronic;
+    font-weight: 800;
     padding-top: 0.2em;
 }
 
 .g_death>.count {
     color: #F46767;
     font-size: 1.6em;
-    font-family: CustomBold;
+    font-family: metronic;
+    font-weight: 800;
     padding-top: 0.2em;
 }
 
 .title {
     font-size: 1em;
     font-weight: bold;
-    font-family: Arial, Helvetica, sans-serif;
-    color: #666666;
+    font-family: manrope;
+    font-weight: 700;
+    color: #434E5F;
 }

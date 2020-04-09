@@ -1,9 +1,43 @@
 @font-face {
-    font-family: CustomBold;
-    src: url('../public/fonts/Metronic_Pro_Condensed_Bold.ttf');
+  font-family: metronic;
+  font-weight: 800;
+  src: url("../public/fonts/Metronic_Pro_Condensed_Bold.ttf");
 }
 
 @font-face {
-    font-family: CustomLite;
-    src: url('../public/fonts/Metronic_Pro_Condensed_Lt.ttf');
+  font-family: metronic;
+  font-weight: 500;
+  src: url("../public/fonts/Metronic_Pro_Condensed_Lt.ttf");
+}
+
+@font-face {
+  font-family: manrope;
+  src: url("/fonts/Manrope-Regular.woff");
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: manrope;
+  src: url("/fonts/Manrope-Medium.woff");
+  font-weight: 500;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: manrope;
+  src: url("/fonts/Manrope-SemiBold.woff");
+  font-weight: 600;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: manrope;
+  src: url("/fonts/Manrope-Bold.woff");
+  font-weight: 700;
+  font-display: swap;
+}
+
+.EntirePage {
+  margin: 0 10px 10px;
 }

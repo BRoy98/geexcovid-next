@@ -15,10 +15,10 @@ const Cases = () => (
       <Col xs="6" sm="6" md="3">
         <div className={styles.g_active}>
           <span className={styles.logo}>
-            <img src="/images/Asset_4.svg" />
+            <img src="/images/Asset_2.svg" />
           </span>
           <span className={styles.count}>0</span>
-          <span className={styles.title}>Active</span>
+          <span className={styles.title}>Hospitalized</span>
         </div>
       </Col>
       <Col xs="6" sm="6" md="3">
@@ -33,7 +33,7 @@ const Cases = () => (
       <Col xs="6" sm="6" md="3">
         <div className={styles.g_death}>
           <span className={styles.logo}>
-            <img src="/images/Asset_2.svg" />
+            <img src="/images/Asset_4.svg" />
           </span>
           <span className={styles.count}>118</span>
           <span className={styles.title}>Deaths</span>
