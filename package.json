@@ -8,6 +8,7 @@
     "start": "next start"
   },
   "dependencies": {
+    "@vx/glyph": "^0.0.195",
     "bootstrap": "^4.4.1",
     "next": "9.3.4",
     "next-images": "^1.4.0",
