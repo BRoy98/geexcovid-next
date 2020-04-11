@@ -1,0 +1,92 @@
+.cases {
+  padding: 1em 0em;
+}
+
+.case_card {
+  -webkit-box-shadow: 6px 5px 25px 7px rgba(92, 0, 255, 0.1);
+  -moz-box-shadow: 6px 5px 25px 7px rgba(92, 0, 255, 0.1);
+  box-shadow: 6px 5px 25px 7px rgba(92, 0, 255, 0.1);
+  padding: 1em;
+  border-radius: 14px;
+  margin: 0.6em 0em;
+}
+
+.g_infections {
+  background: linear-gradient(135deg, #eee4ff, #ffffff);
+}
+
+.g_active {
+  background: linear-gradient(135deg, #fff1cb, #ffffff);
+}
+
+.g_recoveries {
+  background: linear-gradient(135deg, #daf1dc, #ffffff);
+}
+
+.g_death {
+  background: linear-gradient(135deg, #ffdfdf, #ffffff);
+}
+
+.g_infections > span {
+  display: block;
+  text-align: center;
+}
+
+.g_active > span {
+  display: block;
+  text-align: center;
+}
+
+.g_recoveries > span {
+  display: block;
+  text-align: center;
+}
+
+.g_death > span {
+  display: block;
+  text-align: center;
+}
+
+.logo .caseIcon {
+  width: 25%;
+}
+
+.g_infections > .count {
+  color: #903ef3;
+  font-size: 1.6em;
+  font-family: metronic;
+  font-weight: 800;
+  padding-top: 0.2em;
+}
+
+.g_active > .count {
+  color: #f7c93f;
+  font-size: 1.6em;
+  font-family: metronic;
+  font-weight: 800;
+  padding-top: 0.2em;
+}
+
+.g_recoveries > .count {
+  color: #24b94a;
+  font-size: 1.6em;
+  font-family: metronic;
+  font-weight: 800;
+  padding-top: 0.2em;
+}
+
+.g_death > .count {
+  color: #f46767;
+  font-size: 1.6em;
+  font-family: metronic;
+  font-weight: 800;
+  padding-top: 0.2em;
+}
+
+.title {
+  font-size: 1em;
+  font-weight: bold;
+  font-family: manrope;
+  font-weight: 700;
+  color: #434e5f;
+}

@@ -8,8 +8,10 @@
     "start": "next start"
   },
   "dependencies": {
-    "@vx/glyph": "^0.0.195",
+    "@nivo/line": "^0.61.1",
     "bootstrap": "^4.4.1",
+    "framer-motion": "^1.10.3",
+    "isomorphic-unfetch": "^3.0.0",
     "next": "9.3.4",
     "next-images": "^1.4.0",
     "react": "^16.13.1",

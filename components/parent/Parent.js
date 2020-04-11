@@ -1,8 +1,9 @@
 import Header from "../header/Header";
 import BottomNav from "../bottomnav/bottomNav";
+import styles from "./Parent.module.css";
 
 const Parent = (props) => (
-  <div>
+  <div className={styles.parentBg}>
     <Header />
     {props.children}
     <BottomNav page={props.page} />
