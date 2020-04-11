@@ -1,14 +1,12 @@
-import Header from "./components/header/Header";
-import Cases from "./components/cases/Cases";
-import Prevention from "./components/prevention/Prevention";
-import BottomNav from "./components/bottomnav/bottomNav";
+import Cases from "../components/cases/Cases";
+import Prevention from "../components/prevention/Prevention";
+import Parent from "../components/parent/Parent";
+
 const Home = () => (
-  <div className="EntirePage">
-    <Header />
+  <Parent page={'home'}>
     <Cases />
     <Prevention />
-    <BottomNav />
-  </div>
+  </Parent>
 );
 
 export default Home;
