@@ -1,0 +1,48 @@
+.navbar {
+    display: flex;
+    position: fixed;
+    bottom: 0;
+    background-color: white;
+    width: 100%;
+    white-space: nowrap;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    -ms-overflow-style: -ms-autohiding-scrollbar;
+    margin: 1em 0em;
+    -ms-overflow-style: none;
+    /* Internet Explorer 10+ */
+    scrollbar-width: none;
+    /* Firefox */
+}
+
+.navbar::-webkit-scrollbar {
+    display: none;
+    /* Safari and Chrome */
+}
+
+.nav {
+    display: flex;
+}
+
+.nav>span {
+
+    margin: 0em 1em;
+    text-transform: uppercase;
+    flex: 0 0 auto;
+    font-family: metronic;
+    font-weight: 700;
+
+}
+
+.isNotSelected {
+    color: #612EEF;
+    padding: 0.6em 0.8em;
+    border-radius: 10px;
+}
+
+.isSelected {
+    background: #612EEF;
+    color: white;
+    padding: 0.6em 1.6em;
+    border-radius: 10px;
+}

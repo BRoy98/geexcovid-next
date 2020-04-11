@@ -23,12 +23,13 @@
   display: block;
 }
 .maintitle {
-  font-family: CustomBold;
+  font-family: metronic;
+  font-weight: 800;
   font-size: 1.4em;
   display: block;
 }
 .subtitle {
-  font-family: CustomLite;
+  font-family: metronic;
   font-size: 0.8em;
 }
 
