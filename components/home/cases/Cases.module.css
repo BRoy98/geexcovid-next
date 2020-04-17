@@ -27,22 +27,22 @@
   background: linear-gradient(135deg, #ffdfdf, #ffffff);
 }
 
-.g_infections > span {
+.g_infections>span {
   display: block;
   text-align: center;
 }
 
-.g_active > span {
+.g_active>span {
   display: block;
   text-align: center;
 }
 
-.g_recoveries > span {
+.g_recoveries>span {
   display: block;
   text-align: center;
 }
 
-.g_death > span {
+.g_death>span {
   display: block;
   text-align: center;
 }
@@ -51,7 +51,7 @@
   width: 25%;
 }
 
-.g_infections > .count {
+.g_infections>.count {
   color: #903ef3;
   font-size: 1.6em;
   font-family: metronic;
@@ -59,7 +59,7 @@
   padding-top: 0.2em;
 }
 
-.g_active > .count {
+.g_active>.count {
   color: #f7c93f;
   font-size: 1.6em;
   font-family: metronic;
@@ -67,7 +67,7 @@
   padding-top: 0.2em;
 }
 
-.g_recoveries > .count {
+.g_recoveries>.count {
   color: #24b94a;
   font-size: 1.6em;
   font-family: metronic;
@@ -75,7 +75,7 @@
   padding-top: 0.2em;
 }
 
-.g_death > .count {
+.g_death>.count {
   color: #f46767;
   font-size: 1.6em;
   font-family: metronic;
@@ -89,4 +89,14 @@
   font-family: manrope;
   font-weight: 700;
   color: #434e5f;
+}
+
+
+.case_card {
+  -webkit-box-shadow: 6px 5px 25px 7px rgba(92, 0, 255, 0.1);
+  -moz-box-shadow: 6px 5px 25px 7px rgba(92, 0, 255, 0.1);
+  box-shadow: 6px 5px 25px 7px rgba(92, 0, 255, 0.1);
+  padding: 1em;
+  border-radius: 14px;
+  margin: 0.6em 0em;
 }
