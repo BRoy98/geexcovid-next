@@ -106,153 +106,186 @@ const stagger = {
   },
 };
 
-const Cases = (props) => (
-  <motion.div variants={stagger}>
-    <Container>
-      <Row className={styles.cases}>
-        <div></div>
-        <Col xs="6" sm="6" md="3">
-          <motion.div
-            className={[styles.case_card, styles.g_infections].join(" ")}
-            style={{ position: "relative", overflow: "hidden" }}
-            initial={{ x: -60 }}
-            animate={{ x: 0 }}
-            transition={{ ease: "easeIn", duration: 0.4 }}
-          >
-            <span className={styles.logo}>
-              <motion.div animate={iconAnimation} transition={iconTransition}>
-                <img className={styles.caseIcon} src="/images/Asset_1.svg" />
-              </motion.div>
-            </span>
-            {/* <span>+315</span> */}
-            <span className={styles.count}>{props.counts.totalConfirmed}</span>
-            <span className={styles.title}>Infections</span>
-            <div
-              style={{
-                position: "absolute",
-                top: 0,
-                bottom: 0,
-                left: 0,
-                right: 0,
-              }}
+const Cases = (props) => {
+  var totalConfirmed = [
+    {
+      id: "totalConfirmed",
+      data: [],
+    },
+  ];
+  var totalRecoveries;
+  var totalDeaths;
+
+  props.timeSeries.forEach((dayData, index) => {
+    if (index == 0) {
+      totalConfirmed[0].data.push({
+        x: dayData.date,
+        y: dayData.totalconfirmed,
+      });
+    } else {
+      totalConfirmed[0].data.push({
+        x: dayData.date,
+        y: dayData.totalconfirmed - props.timeSeries[index - 1].totalconfirmed,
+      });
+      console.log(
+        dayData.totalconfirmed - props.timeSeries[index - 1].totalconfirmed
+      );
+    }
+  });
+  // console.log("totalConfirmed: ", totalConfirmed);
+
+  return (
+    <motion.div variants={stagger}>
+      <Container>
+        <Row className={styles.cases}>
+          <div></div>
+          <Col xs="6" sm="6" md="3">
+            <motion.div
+              className={[styles.case_card, styles.g_infections].join(" ")}
+              style={{ position: "relative", overflow: "hidden" }}
+              initial={{ x: -60 }}
+              animate={{ x: 0 }}
+              transition={{ ease: "easeIn", duration: 0.4 }}
             >
-              <MyResponsiveLine
-                data={data}
-                color={"#7723F424"}
-              ></MyResponsiveLine>
-            </div>
-          </motion.div>
-        </Col>
-        <Col xs="6" sm="6" md="3">
-          <motion.div
-            className={[styles.case_card, styles.g_active].join(" ")}
-            style={{ position: "relative", overflow: "hidden" }}
-            initial={{ x: -60 }}
-            animate={{ x: 0 }}
-            transition={{ ease: "easeIn", duration: 0.5 }}
-          >
-            <span className={styles.logo}>
-              <motion.div animate={iconAnimation} transition={iconTransition}>
-                <img className={styles.caseIcon} src="/images/Asset_2.svg" />
-              </motion.div>
-            </span>
-            <span className={styles.count}>{props.counts.totalActive}</span>
-            <span className={styles.title}>Hospitalized</span>
-            <div
-              style={{
-                position: "absolute",
-                top: 0,
-                bottom: 0,
-                left: 0,
-                right: 0,
-              }}
+              <span className={styles.logo}>
+                <motion.div animate={iconAnimation} transition={iconTransition}>
+                  <img className={styles.caseIcon} src="/images/Asset_1.svg" />
+                </motion.div>
+              </span>
+              {/* <span>+315</span> */}
+              <span className={styles.count}>
+                {props.counts.totalConfirmed}
+              </span>
+              <span className={styles.title}>Infections</span>
+              <div
+                style={{
+                  position: "absolute",
+                  top: 0,
+                  bottom: 0,
+                  left: 0,
+                  right: 0,
+                }}
+              >
+                <MyResponsiveLine
+                  data={totalConfirmed}
+                  color={"#903EF3BF"}
+                ></MyResponsiveLine>
+              </div>
+            </motion.div>
+          </Col>
+          <Col xs="6" sm="6" md="3">
+            <motion.div
+              className={[styles.case_card, styles.g_active].join(" ")}
+              style={{ position: "relative", overflow: "hidden" }}
+              initial={{ x: -60 }}
+              animate={{ x: 0 }}
+              transition={{ ease: "easeIn", duration: 0.5 }}
             >
-              <MyResponsiveLine
-                data={data}
-                color={"#F7C93F24"}
-              ></MyResponsiveLine>
-            </div>
-            <div
-              style={{
-                position: "absolute",
-                top: 0,
-                bottom: 0,
-                left: 0,
-                right: 0,
-              }}
+              <span className={styles.logo}>
+                <motion.div animate={iconAnimation} transition={iconTransition}>
+                  <img className={styles.caseIcon} src="/images/Asset_2.svg" />
+                </motion.div>
+              </span>
+              <span className={styles.count}>{props.counts.totalActive}</span>
+              <span className={styles.title}>Hospitalized</span>
+              <div
+                style={{
+                  position: "absolute",
+                  top: 0,
+                  bottom: 0,
+                  left: 0,
+                  right: 0,
+                }}
+              >
+                <MyResponsiveLine
+                  data={data}
+                  color={"#F7C93F24"}
+                ></MyResponsiveLine>
+              </div>
+              <div
+                style={{
+                  position: "absolute",
+                  top: 0,
+                  bottom: 0,
+                  left: 0,
+                  right: 0,
+                }}
+              >
+                <MyResponsiveLine
+                  data={data}
+                  color={"#F7C93F24"}
+                ></MyResponsiveLine>
+              </div>
+            </motion.div>
+          </Col>
+          <Col xs="6" sm="6" md="3">
+            <motion.div
+              className={[styles.case_card, styles.g_recoveries].join(" ")}
+              style={{ position: "relative", overflow: "hidden" }}
+              initial={{ x: -60 }}
+              animate={{ x: 0 }}
+              transition={{ ease: "easeIn", duration: 0.6 }}
             >
-              <MyResponsiveLine
-                data={data}
-                color={"#F7C93F24"}
-              ></MyResponsiveLine>
-            </div>
-          </motion.div>
-        </Col>
-        <Col xs="6" sm="6" md="3">
-          <motion.div
-            className={[styles.case_card, styles.g_recoveries].join(" ")}
-            style={{ position: "relative", overflow: "hidden" }}
-            initial={{ x: -60 }}
-            animate={{ x: 0 }}
-            transition={{ ease: "easeIn", duration: 0.6 }}
-          >
-            <span className={styles.logo}>
-              <motion.div animate={iconAnimation} transition={iconTransition}>
-                <img className={styles.caseIcon} src="/images/Asset_3.svg" />
-              </motion.div>
-            </span>
-            <span className={styles.count}>{props.counts.totalRecoveries}</span>
-            <span className={styles.title}>Recoveries</span>
-            <div
-              style={{
-                position: "absolute",
-                top: 0,
-                bottom: 0,
-                left: 0,
-                right: 0,
-              }}
+              <span className={styles.logo}>
+                <motion.div animate={iconAnimation} transition={iconTransition}>
+                  <img className={styles.caseIcon} src="/images/Asset_3.svg" />
+                </motion.div>
+              </span>
+              <span className={styles.count}>
+                {props.counts.totalRecoveries}
+              </span>
+              <span className={styles.title}>Recoveries</span>
+              <div
+                style={{
+                  position: "absolute",
+                  top: 0,
+                  bottom: 0,
+                  left: 0,
+                  right: 0,
+                }}
+              >
+                <MyResponsiveLine
+                  data={data}
+                  color={"#24B94A24"}
+                ></MyResponsiveLine>
+              </div>
+            </motion.div>
+          </Col>
+          <Col xs="6" sm="6" md="3">
+            <motion.div
+              className={[styles.g_death, styles.case_card].join(" ")}
+              style={{ position: "relative", overflow: "hidden" }}
+              initial={{ x: -60 }}
+              animate={{ x: 0 }}
+              transition={{ ease: "easeIn", duration: 0.7 }}
             >
-              <MyResponsiveLine
-                data={data}
-                color={"#24B94A24"}
-              ></MyResponsiveLine>
-            </div>
-          </motion.div>
-        </Col>
-        <Col xs="6" sm="6" md="3">
-          <motion.div
-            className={[styles.g_death, styles.case_card].join(" ")}
-            style={{ position: "relative", overflow: "hidden" }}
-            initial={{ x: -60 }}
-            animate={{ x: 0 }}
-            transition={{ ease: "easeIn", duration: 0.7 }}
-          >
-            <span className={styles.logo}>
-              <motion.div animate={iconAnimation} transition={iconTransition}>
-                <img className={styles.caseIcon} src="/images/Asset_4.svg" />
-              </motion.div>
-            </span>
-            <span className={styles.count}>{props.counts.totalDeaths}</span>
-            <span className={styles.title}>Deaths</span>
-            <div
-              style={{
-                position: "absolute",
-                top: 0,
-                bottom: 0,
-                left: 0,
-                right: 0,
-              }}
-            >
-              <MyResponsiveLine
-                data={data}
-                color={"#F4676724"}
-              ></MyResponsiveLine>
-            </div>
-          </motion.div>
-        </Col>
-      </Row>
-    </Container>
-  </motion.div>
-);
+              <span className={styles.logo}>
+                <motion.div animate={iconAnimation} transition={iconTransition}>
+                  <img className={styles.caseIcon} src="/images/Asset_4.svg" />
+                </motion.div>
+              </span>
+              <span className={styles.count}>{props.counts.totalDeaths}</span>
+              <span className={styles.title}>Deaths</span>
+              <div
+                style={{
+                  position: "absolute",
+                  top: 0,
+                  bottom: 0,
+                  left: 0,
+                  right: 0,
+                }}
+              >
+                <MyResponsiveLine
+                  data={data}
+                  color={"#F4676724"}
+                ></MyResponsiveLine>
+              </div>
+            </motion.div>
+          </Col>
+        </Row>
+      </Container>
+    </motion.div>
+  );
+};
 
 export default Cases;

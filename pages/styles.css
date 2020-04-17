@@ -38,6 +38,10 @@
   font-display: swap;
 }
 
+html {
+  background-color: #F2F4F5;
+}
+
 ol,
 li {
   list-style: none;

@@ -5,7 +5,7 @@ import fetch from "isomorphic-unfetch";
 
 const Home = (props) => (
   <Parent page={"home"}>
-    <Cases counts={props.coronaData.today} />
+    <Cases counts={props.coronaData.today} timeSeries={props.coronaData.timeSeries} />
     <Prevention />
   </Parent>
 );
@@ -18,6 +18,8 @@ Home.getInitialProps = async function () {
     totalActive = 0,
     totalRecoveries = 0,
     totalDeaths = 0;
+
+    console.log(data.cases_time_series);
 
   data.statewise.forEach((state, index) => {
     if (index !== 0) {
@@ -36,6 +38,7 @@ Home.getInitialProps = async function () {
         totalRecoveries: totalRecoveries,
         totalDeaths: totalDeaths,
       },
+      timeSeries: data.cases_time_series
     },
   };
 };
