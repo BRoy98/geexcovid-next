@@ -25,15 +25,18 @@
   background-color: #4e60c2;
   border-radius: 15px;
   white-space: nowrap;
+  grid-template-rows: auto;
+  grid-template-columns: 25% 25% 25% 25%;
   overflow-x: auto;
   -webkit-overflow-scrolling: touch;
-  -ms-overflow-style: -ms-autohiding-scrollbar;
+  text-align: center;
   /* margin: 1em 0em; */
   -ms-overflow-style: none;
   scrollbar-width: none;
-  display: flex;
+  display: grid;
   align-items: center;
 }
+
 
 .navImg {
   color: white;
@@ -49,7 +52,7 @@
   margin: 0em 1em;
   text-transform: uppercase;
   flex: 0 0 auto;
-  font-size: 0.6em;
+  font-size: 0.8em;
   font-family: metronic;
   font-weight: 700;
   margin: 1em 1em;
@@ -62,9 +65,30 @@
 }
 
 .isSelected {
+  color: #354394;
   background: white;
-  color: #4e60c2;
-  padding: 0.6em 1em;
+  padding: 0.6em 0.6em;
   border-radius: 5px;
   margin: 5em 0em;
+}
+
+.navIconNotSelected {
+  fill: white;
+  width: 1.4em;
+}
+
+.navIconNotSelected>svg,
+.navIconSelected>svg {
+  width: 1.8em;
+  padding-right: 0.2em;
+}
+
+.navIconSelected {
+  width: 1.4em;
+  fill: #354394;
+}
+
+.disabled {
+  display: none;
+  fill: white;
 }
