@@ -97,7 +97,7 @@ const iconTransition = {
   times: [0.445, 0.05, 0.55, 0.95],
   loop: Infinity,
 };
-
+const easing = [0.6, -0.5, 0.01, 0.99];
 const stagger = {
   animate: {
     transition: {
@@ -199,9 +199,9 @@ const Cases = (props) => {
             <motion.div
               className={[styles.case_card, styles.g_infections].join(" ")}
               style={{ position: "relative", overflow: "hidden" }}
-              initial={{ x: -60 }}
-              animate={{ x: 0 }}
-              transition={{ ease: "easeIn", duration: 0.4 }}
+              initial={{ y: 60, opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              transition={{ ease: easing, duration: 0.4, delay: 0.2 }}
             >
               <span className={styles.logo}>
                 <motion.div animate={iconAnimation} transition={iconTransition}>
@@ -220,7 +220,7 @@ const Cases = (props) => {
                   bottom: 0,
                   left: 0,
                   right: 0,
-                  filter: 'blur(1.4px)'
+                  filter: "blur(1.4px)",
                 }}
               >
                 <MyResponsiveLine
@@ -234,9 +234,9 @@ const Cases = (props) => {
             <motion.div
               className={[styles.case_card, styles.g_active].join(" ")}
               style={{ position: "relative", overflow: "hidden" }}
-              initial={{ x: -60 }}
-              animate={{ x: 0 }}
-              transition={{ ease: "easeIn", duration: 0.5 }}
+              initial={{ y: 60, opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              transition={{ ease: easing, duration: 0.6, delay: 0.4 }}
             >
               <span className={styles.logo}>
                 <motion.div animate={iconAnimation} transition={iconTransition}>
@@ -252,11 +252,12 @@ const Cases = (props) => {
                   bottom: 0,
                   left: 0,
                   right: 0,
+                  filter: "blur(1.4px)",
                 }}
               >
                 <MyResponsiveLine
                   data={totalActive}
-                  color={"#F7C93F24"}
+                  color={"#F7C93FBF"}
                 ></MyResponsiveLine>
               </div>
             </motion.div>
@@ -265,9 +266,9 @@ const Cases = (props) => {
             <motion.div
               className={[styles.case_card, styles.g_recoveries].join(" ")}
               style={{ position: "relative", overflow: "hidden" }}
-              initial={{ x: -60 }}
-              animate={{ x: 0 }}
-              transition={{ ease: "easeIn", duration: 0.6 }}
+              initial={{ y: 60, opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              transition={{ ease: easing, duration: 0.8, delay: 0.6 }}
             >
               <span className={styles.logo}>
                 <motion.div animate={iconAnimation} transition={iconTransition}>
@@ -285,11 +286,12 @@ const Cases = (props) => {
                   bottom: 0,
                   left: 0,
                   right: 0,
+                  filter: "blur(1.4px)",
                 }}
               >
                 <MyResponsiveLine
                   data={totalRecoveries}
-                  color={"#24B94A24"}
+                  color={"#24B94ABF"}
                 ></MyResponsiveLine>
               </div>
             </motion.div>
@@ -298,9 +300,9 @@ const Cases = (props) => {
             <motion.div
               className={[styles.g_death, styles.case_card].join(" ")}
               style={{ position: "relative", overflow: "hidden" }}
-              initial={{ x: -60 }}
-              animate={{ x: 0 }}
-              transition={{ ease: "easeIn", duration: 0.7 }}
+              initial={{ y: 60, opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              transition={{ ease: easing, duration: 0.9, delay: 0.8 }}
             >
               <span className={styles.logo}>
                 <motion.div animate={iconAnimation} transition={iconTransition}>
@@ -316,11 +318,12 @@ const Cases = (props) => {
                   bottom: 0,
                   left: 0,
                   right: 0,
+                  filter: "blur(1.4px)",
                 }}
               >
                 <MyResponsiveLine
                   data={totalDeaths}
-                  color={"#F4676724"}
+                  color={"#F46767BF"}
                 ></MyResponsiveLine>
               </div>
             </motion.div>
