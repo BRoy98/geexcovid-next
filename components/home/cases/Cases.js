@@ -113,26 +113,82 @@ const Cases = (props) => {
       data: [],
     },
   ];
-  var totalRecoveries;
-  var totalDeaths;
-
+  var totalActive = [
+    {
+      id: "totalActive",
+      data: [],
+    },
+  ];
+  var totalRecoveries = [
+    {
+      id: "totalRecoveries",
+      data: [],
+    },
+  ];
+  var totalDeaths = [
+    {
+      id: "totalDeaths",
+      data: [],
+    },
+  ];
+  console.log("ts" + props.timeSeries);
   props.timeSeries.forEach((dayData, index) => {
     if (index == 0) {
       totalConfirmed[0].data.push({
         x: dayData.date,
         y: dayData.totalconfirmed,
       });
+      totalRecoveries[0].data.push({
+        x: dayData.date,
+        y: dayData.totalrecovered,
+      });
+      totalDeaths[0].data.push({
+        x: dayData.date,
+        y: dayData.totaldeceased,
+      });
+      totalActive[0].data.push({
+        x: dayData.date,
+        y:
+          dayData.totalconfirmed -
+          dayData.totalrecovered -
+          dayData.totaldeceased,
+      });
     } else {
       totalConfirmed[0].data.push({
         x: dayData.date,
         y: dayData.totalconfirmed - props.timeSeries[index - 1].totalconfirmed,
       });
+      totalRecoveries[0].data.push({
+        x: dayData.date,
+        y: dayData.totalrecovered - props.timeSeries[index - 1].totalrecovered,
+      });
+      totalDeaths[0].data.push({
+        x: dayData.date,
+        y: dayData.totaldeceased - props.timeSeries[index - 1].totaldeceased,
+      });
+      var pastArray = props.timeSeries[index - 1];
+      var past =
+        pastArray.totalconfirmed -
+        pastArray.totalrecovered -
+        pastArray.totaldeceased;
+      var present =
+        dayData.totalconfirmed - dayData.totalrecovered - dayData.totaldeceased;
+      totalActive[0].data.push({
+        x: dayData.date,
+        y: present - past,
+      });
       console.log(
-        dayData.totalconfirmed - props.timeSeries[index - 1].totalconfirmed
+        dayData.totalConfirmed -
+          dayData.totalrecovered -
+          dayData.totaldeceased -
+          props.timeSeries[index - 1].totalconfirmed
       );
     }
   });
-  // console.log("totalConfirmed: ", totalConfirmed);
+
+  console.log("totalActive :", totalActive);
+
+  console.log("totalConfirmed: ", totalConfirmed);
 
   return (
     <motion.div variants={stagger}>
@@ -198,21 +254,7 @@ const Cases = (props) => {
                 }}
               >
                 <MyResponsiveLine
-                  data={data}
-                  color={"#F7C93F24"}
-                ></MyResponsiveLine>
-              </div>
-              <div
-                style={{
-                  position: "absolute",
-                  top: 0,
-                  bottom: 0,
-                  left: 0,
-                  right: 0,
-                }}
-              >
-                <MyResponsiveLine
-                  data={data}
+                  data={totalActive}
                   color={"#F7C93F24"}
                 ></MyResponsiveLine>
               </div>
@@ -245,7 +287,7 @@ const Cases = (props) => {
                 }}
               >
                 <MyResponsiveLine
-                  data={data}
+                  data={totalRecoveries}
                   color={"#24B94A24"}
                 ></MyResponsiveLine>
               </div>
@@ -276,7 +318,7 @@ const Cases = (props) => {
                 }}
               >
                 <MyResponsiveLine
-                  data={data}
+                  data={totalDeaths}
                   color={"#F4676724"}
                 ></MyResponsiveLine>
               </div>
