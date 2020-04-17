@@ -1,6 +1,6 @@
 import Header from "../header/Header";
 import BottomNav from "../bottomnav/bottomNav";
-import styles from "./Parent.module.css";
+import styles from "./parent.module.css";
 
 const Parent = (props) => (
   <div className={styles.parentBg}>

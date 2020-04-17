@@ -51,7 +51,7 @@ export const Prevention = () => (
               whileTap={{ scale: 0.95 }}
             >
               <div className={styles.btnbg}>
-                <img src="/images/Arrow_1.svg" />
+                <img src="/images/arrow_1.svg" />
               </div>
             </motion.span>
           </Col>
