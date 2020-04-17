@@ -20,22 +20,7 @@
   /* Safari and Chrome */
 }
 
-.nav {
-  display: flex;
-  background-color: #4e60c2;
-  border-radius: 15px;
-  white-space: nowrap;
-  grid-template-rows: auto;
-  grid-template-columns: 25% 25% 25% 25%;
-  overflow-x: auto;
-  -webkit-overflow-scrolling: touch;
-  text-align: center;
-  /* margin: 1em 0em; */
-  -ms-overflow-style: none;
-  scrollbar-width: none;
-  display: grid;
-  align-items: center;
-}
+
 
 
 .navImg {
@@ -48,15 +33,7 @@
   width: 18px;
 }
 
-.nav>span {
-  margin: 0em 1em;
-  text-transform: uppercase;
-  flex: 0 0 auto;
-  font-size: 0.8em;
-  font-family: metronic;
-  font-weight: 700;
-  margin: 1em 1em;
-}
+
 
 .isNotSelected {
   color: white;

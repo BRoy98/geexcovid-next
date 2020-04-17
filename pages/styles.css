@@ -72,3 +72,85 @@ ol {
   position: absolute;
   bottom: -4px;
 }
+
+
+.home {
+  display: flex;
+  background-color: #4e60c2;
+  border-radius: 15px;
+  white-space: nowrap;
+  grid-template-rows: auto;
+  grid-template-columns: 35% 22% 22% 21%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  text-align: center;
+  /* margin: 1em 0em; */
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  display: grid;
+  align-items: center;
+}
+
+.news {
+  display: flex;
+  background-color: #4e60c2;
+  border-radius: 15px;
+  white-space: nowrap;
+  grid-template-rows: auto;
+  grid-template-columns: 21% 35% 22% 22%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  text-align: center;
+  /* margin: 1em 0em; */
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  display: grid;
+  align-items: center;
+}
+
+.helpline {
+  display: flex;
+  background-color: #4e60c2;
+  border-radius: 15px;
+  white-space: nowrap;
+  grid-template-rows: auto;
+  grid-template-columns: 22% 21% 35% 22%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  text-align: center;
+  /* margin: 1em 0em; */
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  display: grid;
+  align-items: center;
+}
+
+.about {
+  display: flex;
+  background-color: #4e60c2;
+  border-radius: 15px;
+  white-space: nowrap;
+  grid-template-rows: auto;
+  grid-template-columns: 22% 22% 21% 35%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  text-align: center;
+  /* margin: 1em 0em; */
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  display: grid;
+  align-items: center;
+}
+
+.home>span,
+.news>span,
+.helpline>span,
+.about>span {
+  margin: 0em 1em;
+  text-transform: uppercase;
+  flex: 0 0 auto;
+  font-size: 0.8em;
+  font-family: metronic;
+  font-weight: 700;
+  margin: 1em 1em;
+}
