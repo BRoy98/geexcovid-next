@@ -22,8 +22,6 @@ Home.getInitialProps = async function () {
     totalRecoveries = 0,
     totalDeaths = 0;
 
-  console.log("data i need :" + data.cases_time_series);
-
   data.statewise.forEach((state, index) => {
     if (index !== 0) {
       totalConfirmed += parseInt(state.confirmed);

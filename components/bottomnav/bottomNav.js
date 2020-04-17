@@ -30,7 +30,7 @@ const BottomNav = (props, items) => (
     variants={fadeInUp}
   >
     <Container>
-      <motion.div style={{ paddingBottom: "0.5em" }} variants={fadeInUp}>
+      <motion.div style={{ paddingBottom: "1em" }} variants={fadeInUp}>
         <motion.div className={[ 'bottomnav', props.page].join(' ')}>
           <Link href="/">
             <motion.span

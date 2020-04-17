@@ -4,7 +4,7 @@
   bottom: 0;
   width: 100%;
   white-space: nowrap;
-  overflow-x: auto;
+  /* overflow-x: auto; */
   -webkit-overflow-scrolling: touch;
   -ms-overflow-style: -ms-autohiding-scrollbar;
   /* margin: 1em 0em; */
@@ -42,15 +42,15 @@
 }
 
 .isSelected {
-  color: #354394;
-  background: white;
-  padding: 0.6em 0.6em;
-  border-radius: 5px;
+  color: #fff;
+  background: #FC312F;
+  padding: 1em 1em;
+  border-radius: 10px;
   margin: 5em 0em;
 }
 
 .navIconNotSelected {
-  fill: white;
+  fill: #FC312F;
   width: 1.4em;
 }
 
@@ -62,7 +62,7 @@
 
 .navIconSelected {
   width: 1.4em;
-  fill: #354394;
+  fill: #fff;
 }
 
 .disabled {

@@ -220,11 +220,12 @@ const Cases = (props) => {
                   bottom: 0,
                   left: 0,
                   right: 0,
+                  filter: 'blur(1.4px)'
                 }}
               >
                 <MyResponsiveLine
                   data={totalConfirmed}
-                  color={"#903EF3BF"}
+                  color={"#FC312FBF"}
                 ></MyResponsiveLine>
               </div>
             </motion.div>

@@ -39,7 +39,7 @@
 }
 
 html {
-  background-color: #F2F4F5;
+  background-color: #f2f4f5;
 }
 
 ol,
@@ -78,7 +78,8 @@ ol {
 
 .bottomnav {
   display: flex;
-  background-color: #4e60c2;
+  /* background-color: #4e60c2; */
+  background-color: #ffffff;
   border-radius: 15px;
   white-space: nowrap;
   grid-template-rows: auto;
@@ -90,6 +91,9 @@ ol {
   scrollbar-width: none;
   display: grid;
   align-items: center;
+  -webkit-box-shadow: 0px 0px 15px 4px #FC312F26;
+  -moz-box-shadow: 0px 0px 15px 4px #FC312F26;
+  box-shadow: 0px 0px 15px 4px #FC312F26;
 }
 
 .home {
@@ -116,7 +120,7 @@ ol {
   text-transform: uppercase;
   flex: 0 0 auto;
   font-size: 0.8em;
-  font-family: metronic;
+  font-family: manrope;
   font-weight: 700;
-  margin: 1em 1em;
+  margin: 0.5em 0.5em;
 }

@@ -3,28 +3,32 @@
 }
 
 .case_card {
-  -webkit-box-shadow: 6px 5px 25px 7px rgba(92, 0, 255, 0.1);
-  -moz-box-shadow: 6px 5px 25px 7px rgba(92, 0, 255, 0.1);
-  box-shadow: 6px 5px 25px 7px rgba(92, 0, 255, 0.1);
+  -webkit-box-shadow: 0px 4px 15px 4px #FC312F26;
+  -moz-box-shadow: 0px 4px 15px 4px #FC312F26;
+  box-shadow: 0px 4px 15px 4px #FC312F26;
   padding: 1em;
   border-radius: 14px;
   margin: 0.6em 0em;
 }
 
 .g_infections {
-  background: linear-gradient(135deg, #eee4ff, #ffffff);
+  background: #fff;
+  /* background: linear-gradient(135deg, #eee4ff, #ffffff); */
 }
 
 .g_active {
-  background: linear-gradient(135deg, #fff1cb, #ffffff);
+  background: #fff;
+  /* background: linear-gradient(135deg, #fff1cb, #ffffff); */
 }
 
 .g_recoveries {
-  background: linear-gradient(135deg, #daf1dc, #ffffff);
+  background: #fff;
+  /* background: linear-gradient(135deg, #daf1dc, #ffffff); */
 }
 
 .g_death {
-  background: linear-gradient(135deg, #ffdfdf, #ffffff);
+  background: #fff;
+  /* background: linear-gradient(135deg, #ffdfdf, #ffffff); */
 }
 
 .g_infections>span {
@@ -52,7 +56,7 @@
 }
 
 .g_infections>.count {
-  color: #903ef3;
+  color: #FC312F;
   font-size: 1.6em;
   font-family: metronic;
   font-weight: 800;
@@ -76,7 +80,7 @@
 }
 
 .g_death>.count {
-  color: #f46767;
+  color: #24252c;
   font-size: 1.6em;
   font-family: metronic;
   font-weight: 800;
@@ -92,11 +96,11 @@
 }
 
 
-.case_card {
+/* .case_card {
   -webkit-box-shadow: 6px 5px 25px 7px rgba(92, 0, 255, 0.1);
   -moz-box-shadow: 6px 5px 25px 7px rgba(92, 0, 255, 0.1);
   box-shadow: 6px 5px 25px 7px rgba(92, 0, 255, 0.1);
   padding: 1em;
   border-radius: 14px;
   margin: 0.6em 0em;
-}
+} */
