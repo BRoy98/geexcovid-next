@@ -1,17 +1,19 @@
 .prevention {
-  background: #612EEF;
+  background: #fff;
   display: flex;
   overflow: visible;
   border-radius: 16px;
 }
-.image > img {
+
+.image>img {
   width: 50%;
   overflow: visible;
   transform: scale(1.5);
   margin-left: 15%;
 }
+
 .titles {
-  color: white;
+  color: #000;
   align-content: center;
   /* display: flex; */
   /* Hacks for days! */
@@ -19,18 +21,23 @@
   margin-left: 0px;
   line-height: 1;
 }
+
 .block {
   display: block;
 }
+
 .maintitle {
-  font-family: metronic;
+  font-family: 'Roboto';
   font-weight: 800;
   font-size: 1.4em;
   display: block;
 }
+
 .subtitle {
-  font-family: metronic;
-  font-size: 0.8em;
+  font-family: 'Roboto';
+  font-weight: 400;
+  font-size: 0.9em;
+  color: #9AA0B0;
 }
 
 .button {
@@ -41,11 +48,12 @@
 .btnbg {
   width: 40px;
   height: 40px;
-  background: #ffffff56;
+  background: #EA0000b9;
   border-radius: 50%;
   display: flex;
 }
-.btnbg > img {
+
+.btnbg>img {
   max-width: 50%;
   margin: 0 auto;
   display: flex;

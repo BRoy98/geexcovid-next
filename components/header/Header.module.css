@@ -16,14 +16,15 @@
 
 .india {
     padding: 0px 0.4em;
-    font-family: metronic;
-    font-weight: 800;
+    font-family: 'Roboto';
+    font-weight: 700;
     font-size: 1.6em;
 }
 
 .covid {
-    font-family: metronic;
-    font-weight: 500;
+    font-family: 'Roboto';
+    font-weight: 400;
     font-size: 1em;
     margin-top: 3px;
+    color: rgb(49, 49, 49);
 }

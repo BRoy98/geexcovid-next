@@ -3,9 +3,7 @@
 }
 
 .case_card {
-  -webkit-box-shadow: 0px 4px 15px 4px #FC312F26;
-  -moz-box-shadow: 0px 4px 15px 4px #FC312F26;
-  box-shadow: 0px 4px 15px 4px #FC312F26;
+
   padding: 1em;
   border-radius: 14px;
   margin: 0.6em 0em;
@@ -56,43 +54,42 @@
 }
 
 .g_infections>.count {
-  color: #FC312F;
+  color: #3B3C43;
   font-size: 1.6em;
-  font-family: metronic;
-  font-weight: 800;
+  font-family: 'Lato';
+  font-weight: 900;
   padding-top: 0.2em;
 }
 
 .g_active>.count {
-  color: #f7c93f;
+  color: #3B3C43;
   font-size: 1.6em;
-  font-family: metronic;
-  font-weight: 800;
+  font-family: 'Lato';
+  font-weight: 900;
   padding-top: 0.2em;
 }
 
 .g_recoveries>.count {
-  color: #24b94a;
+  color: #3B3C43;
   font-size: 1.6em;
-  font-family: metronic;
-  font-weight: 800;
+  font-family: 'Lato';
+  font-weight: 900;
   padding-top: 0.2em;
 }
 
 .g_death>.count {
-  color: #24252c;
+  color: #3B3C43;
   font-size: 1.6em;
-  font-family: metronic;
-  font-weight: 800;
+  font-family: 'Lato';
+  font-weight: 900;
   padding-top: 0.2em;
 }
 
 .title {
   font-size: 1em;
-  font-weight: bold;
-  font-family: manrope;
+  font-family: 'Roboto';
   font-weight: 700;
-  color: #434e5f;
+  color: #9399AA;
 }
 
 

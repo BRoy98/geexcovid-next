@@ -42,15 +42,15 @@
 }
 
 .isSelected {
-  color: #fff;
-  background: #FC312F;
+  color: #000;
+  background: rgb(243, 243, 243);
   padding: 1em 1em;
   border-radius: 10px;
   margin: 5em 0em;
 }
 
 .navIconNotSelected {
-  fill: #FC312F;
+  fill: #414141;
   width: 1.4em;
 }
 
@@ -62,7 +62,7 @@
 
 .navIconSelected {
   width: 1.4em;
-  fill: #fff;
+  fill: #000;
 }
 
 .disabled {

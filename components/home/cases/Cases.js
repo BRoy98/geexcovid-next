@@ -76,9 +76,10 @@ const MyResponsiveLine = ({ data, color }) => (
     axisRight={null}
     axisBottom={null}
     axisLeft={null}
-    lineWidth={3}
-    enableArea={false}
-    areaOpacity={0.1}
+    lineWidth={2}
+    enableArea={true}
+    areaBlendMode="color-burn"
+    areaOpacity={1}
     enableGridX={false}
     enableGridY={false}
     enablePoints={false}
@@ -199,14 +200,15 @@ const Cases = (props) => {
             <motion.div
               className={[styles.case_card, styles.g_infections].join(" ")}
               style={{ position: "relative", overflow: "hidden" }}
+              key={styles.case_card}
               initial={{ y: 60, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
-              transition={{ ease: easing, duration: 0.4, delay: 0.2 }}
+              transition={{ ease: easing, duration: 0.3, delay: 0.2 }}
             >
               <span className={styles.logo}>
-                <motion.div animate={iconAnimation} transition={iconTransition}>
+                {/* <motion.div animate={iconAnimation} transition={iconTransition}>
                   <img className={styles.caseIcon} src="/images/Asset_1.svg" />
-                </motion.div>
+                </motion.div> */}
               </span>
               {/* <span>+315</span> */}
               <span className={styles.count}>
@@ -220,12 +222,11 @@ const Cases = (props) => {
                   bottom: 0,
                   left: 0,
                   right: 0,
-                  filter: "blur(1.4px)",
                 }}
               >
                 <MyResponsiveLine
                   data={totalConfirmed}
-                  color={"#FC312FBF"}
+                  color={"#414141BF"}
                 ></MyResponsiveLine>
               </div>
             </motion.div>
@@ -236,12 +237,12 @@ const Cases = (props) => {
               style={{ position: "relative", overflow: "hidden" }}
               initial={{ y: 60, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
-              transition={{ ease: easing, duration: 0.6, delay: 0.4 }}
+              transition={{ ease: easing, duration: 0.4, delay: 0.3 }}
             >
               <span className={styles.logo}>
-                <motion.div animate={iconAnimation} transition={iconTransition}>
+                {/* <motion.div animate={iconAnimation} transition={iconTransition}>
                   <img className={styles.caseIcon} src="/images/Asset_2.svg" />
-                </motion.div>
+                </motion.div> */}
               </span>
               <span className={styles.count}>{props.counts.totalActive}</span>
               <span className={styles.title}>Hospitalized</span>
@@ -252,7 +253,6 @@ const Cases = (props) => {
                   bottom: 0,
                   left: 0,
                   right: 0,
-                  filter: "blur(1.4px)",
                 }}
               >
                 <MyResponsiveLine
@@ -268,12 +268,12 @@ const Cases = (props) => {
               style={{ position: "relative", overflow: "hidden" }}
               initial={{ y: 60, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
-              transition={{ ease: easing, duration: 0.8, delay: 0.6 }}
+              transition={{ ease: easing, duration: 0.5, delay: 0.4 }}
             >
               <span className={styles.logo}>
-                <motion.div animate={iconAnimation} transition={iconTransition}>
+                {/* <motion.div animate={iconAnimation} transition={iconTransition}>
                   <img className={styles.caseIcon} src="/images/Asset_3.svg" />
-                </motion.div>
+                </motion.div> */}
               </span>
               <span className={styles.count}>
                 {props.counts.totalRecoveries}
@@ -286,7 +286,6 @@ const Cases = (props) => {
                   bottom: 0,
                   left: 0,
                   right: 0,
-                  filter: "blur(1.4px)",
                 }}
               >
                 <MyResponsiveLine
@@ -302,12 +301,12 @@ const Cases = (props) => {
               style={{ position: "relative", overflow: "hidden" }}
               initial={{ y: 60, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
-              transition={{ ease: easing, duration: 0.9, delay: 0.8 }}
+              transition={{ ease: easing, duration: 0.6, delay: 0.6 }}
             >
               <span className={styles.logo}>
-                <motion.div animate={iconAnimation} transition={iconTransition}>
+                {/* <motion.div animate={iconAnimation} transition={iconTransition}>
                   <img className={styles.caseIcon} src="/images/Asset_4.svg" />
-                </motion.div>
+                </motion.div> */}
               </span>
               <span className={styles.count}>{props.counts.totalDeaths}</span>
               <span className={styles.title}>Deaths</span>
@@ -318,7 +317,6 @@ const Cases = (props) => {
                   bottom: 0,
                   left: 0,
                   right: 0,
-                  filter: "blur(1.4px)",
                 }}
               >
                 <MyResponsiveLine

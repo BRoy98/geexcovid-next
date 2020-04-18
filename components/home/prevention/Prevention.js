@@ -25,16 +25,17 @@ export const Prevention = () => (
     <Row>
       <Col>
         <motion.div
-          initial={{ x: -60, opacity: 0 }}
-          animate={{ x: 0, opacity: 1 }}
-          transition={{ delay: 0.2 }}
+          initial={{ y: 60, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          transition={{ duration: 0.4, delay: 0.6 }}
         >
           <Col className={styles.prevention}>
             <motion.span
-              initial={{ x: -60, opacity: 0 }}
-              animate={{ x: 0, opacity: 1 }}
-              transition={{ delay: 0.2 }}
+              initial={{ y: 60, opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              transition={{ duration: 0.4, delay: 0.2 }}
               className={styles.image}
+              key={styles.image}
             >
               <img src="/images/Asset_5.svg" />
             </motion.span>
@@ -49,6 +50,7 @@ export const Prevention = () => (
               className={styles.button}
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
+              key={styles.button}
             >
               <div className={styles.btnbg}>
                 <img src="/images/arrow_1.svg" />
